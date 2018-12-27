@@ -20,8 +20,7 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     HomeComponent,
     AboutComponent,
     HeroesComponent,
-    HeroeComponent,
-    
+    HeroeComponent,    
   ],
   imports: [
     BrowserModule,
