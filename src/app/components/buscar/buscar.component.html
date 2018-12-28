@@ -1,4 +1,4 @@
-<div class="container text-center center">
+<div *ngFor="let heroe of heroes" class="container text-center center">
 
     <h1 class="text-center">{{ heroe.nombre | uppercase }} </h1>
     <h5>{{ heroe.aparicion | date:'y'}}</h5>
@@ -8,7 +8,7 @@
         <div class="col-md-4">
             <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre ">
             <br><br>
-            <a href="heroes" class="btn btn-outline-danger btn block ">Regresar</a>
+            <a href="heroes " class="btn btn-outline-danger btn block ">Regresar</a>
         </div>
 
         <div class="col-md-8 ">
@@ -18,8 +18,8 @@
                 {{ heroe.bio }}
             </p>
             <div>
-                <img *ngIf="heroe.casa =='Marvel' " src="../../assets/img/marvel.png ">
-                <img *ngIf="heroe.casa =='DC' " src="../../assets/img/dc.png ">
+                <img *ngIf="heroe.casa=='Marvel' " src="../../assets/img/marvel.png ">
+                <img *ngIf="heroe.casa=='DC' " src="../../assets/img/dc.png ">
 
             </div>
         </div>
