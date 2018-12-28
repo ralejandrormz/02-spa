@@ -13,7 +13,7 @@ export class HeroeComponent {
               private _heroesService:HeroesService          
     ) {
     this.acivatedRoute.params.subscribe(params => {
-      //console.log(params['id']);
+      console.log(params['id']);
       this.heroe = this._heroesService.getHeroe(params['id']);
     });
   }
