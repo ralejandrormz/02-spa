@@ -69,10 +69,11 @@ export class HeroesService {
       let heroesArr:Heroe[] = [];
       name = name.toLowerCase();
 
-      for(let heroe of this.heroes){
-        
+      for(let i = 0; i < this.heroes.length; i++){
+        let heroe = this.heroes[i];
         let heroeName = heroe.nombre.toLocaleLowerCase();
         if(heroeName.indexOf( name ) >= 0){
+          heroe.idx = i;
           heroesArr.push(heroe);
         }
       }
@@ -82,6 +83,7 @@ export class HeroesService {
 }
 
 export interface Heroe{
+    idx?:number;
     nombre:string;
     bio:string;
     img:string;
